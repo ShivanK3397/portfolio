@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 test("pages have accessible navigation, metadata, and fit the viewport", async ({ page }, testInfo) => {
-  for (const [path, label] of [["/", "Home"], ["/about", "About"], ["/work", "Work"]]) {
+  for (const [path, label] of [["/", "Home"], ["/about", "About"], ["/work", "Work"], ["/projects", "Projects"]]) {
     const response = await page.goto(path);
     expect(response?.status()).toBe(200);
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();

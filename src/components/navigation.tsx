@@ -7,7 +7,7 @@ export function Navigation() {
   const pathname = usePathname();
   return (
     <nav aria-label="Main navigation" className="navigation">
-      {[{ href: "/", label: "Home" }, { href: "/about", label: "About" }, { href: "/work", label: "Work" }].map(({ href, label }) => (
+      {[{ href: "/", label: "Home" }, { href: "/work", label: "Work" }, { href: "/projects", label: "Projects" }, { href: "/about", label: "About" }].map(({ href, label }) => (
         <Link key={href} href={href} aria-current={pathname === href ? "page" : undefined}>{label}</Link>
       ))}
     </nav>
