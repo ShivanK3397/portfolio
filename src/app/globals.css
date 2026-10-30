@@ -115,6 +115,14 @@ h3 { font-size: 21px; letter-spacing: -.5px; }
 .skills-list, .timeline { display: grid; gap: 32px; }
 .organization { margin-top: 6px; }
 .not-found { min-height: 65vh; }
+.resume-section { border-top: 1px solid var(--line); padding: 48px 0 60px; }
+.resume-section .section-heading { flex-wrap: wrap; }
+.resume-pages { width: 100%; max-width: 900px; margin-inline: auto; }
+.resume-pages .react-pdf__Page { margin-bottom: 24px; background: white; color: #111; box-shadow: 0 3px 20px #00000014; }
+.resume-pages .react-pdf__Page canvas { display: block; max-width: 100%; height: auto !important; }
+.resume-pages .react-pdf__Page * { transition: none !important; }
+.resume-status { padding: 28px; color: var(--muted); }
+.resume-status a { color: var(--accent); text-decoration: underline; }
 .not-found .button { margin-top: 30px; }
 .skip-link { position: fixed; z-index: 100; top: 12px; left: 12px; padding: 12px 20px; background: var(--ink); color: white; transform: translateY(-160%); }
 .skip-link:focus { transform: translateY(0); }

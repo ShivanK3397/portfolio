@@ -27,6 +27,7 @@ type Profile = {
 // Replace these explicit placeholders with your supplied content before launch.
 export const profile: Profile = {
   name: "Shivan Kathir",
+  resumeUrl: "/shivans-resume.pdf",
   email: "shivan.kathir@gmail.com",
   githubUrl: "https://github.com/ShivanK3397",
   linkedinUrl: "https://www.linkedin.com/in/shivan-kathir-08aa5a2b6/",
@@ -91,7 +92,7 @@ export type Project = {
   technologies: string[];
   highlights: string[];
   image: { src: string; alt: string; width: number; height: number };
-  githubUrl: string;
+  githubUrl?: string;
 };
 
 export const projects: Project[] = [
@@ -113,6 +114,24 @@ export const projects: Project[] = [
       height: 907,
     },
     githubUrl: "https://github.com/ShivanK3397/Malicious-Link-Checker",
+  },
+  {
+    id: "jarvis",
+    title: "Jarvis | Voice-Controlled AI Desktop Assistant",
+    summary: "A Windows desktop assistant that uses voice and text interaction with a Gemini-powered AI agent to answer questions and carry out browser tasks.",
+    technologies: ["Electron", "React", "TypeScript", "Python", "LiveKit Agents", "Gemini", "Playwright"],
+    highlights: [
+      "Built a Windows desktop assistant that uses voice and text interaction with a Gemini-powered AI agent to answer questions and carry out browser tasks.",
+      "Integrated a persistent Playwright browser for web navigation and interaction, with approval flows for important actions.",
+      "Developed the desktop app with Electron, React, and TypeScript, connected to a Python backend using LiveKit Agents and Gemini.",
+    ],
+    image: {
+      src: "/projects/jarvis.png",
+      alt: "Jarvis desktop assistant showing a voice listening state and conversation panel.",
+      width: 1446,
+      height: 768,
+    },
+    githubUrl: "https://github.com/ShivanK3397/AI-Voice-Assistant",
   },
 ];
 

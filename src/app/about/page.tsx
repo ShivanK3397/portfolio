@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { profile } from "@/content/portfolio";
 import { ContactSection } from "@/components/site-shell";
+import { ResumePreview } from "@/components/resume-preview";
 
 export const metadata: Metadata = { title: "About", description: "The background, experience, and interests behind the work.", alternates: { canonical: "/about" } };
 
@@ -11,9 +12,9 @@ export default function About() {
       <div><p className="eyebrow">01 / Introduction</p><h2>Hello, I’m<br />{profile.name}<span className="brand-dot">.</span></h2></div>
       <div className="prose">{profile.bio.length ? profile.bio.map(paragraph => <p key={paragraph}>{paragraph}</p>) : 
       <p>My story is coming soon. This space will share the experiences and interests behind my work.</p>}
-      {profile.resumeUrl && <a className="button" href={profile.resumeUrl} download>Download résumé <span aria-hidden="true">↓</span></a>}</div>
+      </div>
       </section>{profile.skills.length > 0 && <section className="about-section"><div><p className="eyebrow">02 / Toolkit</p><h2>Skills & tools</h2>
       </div><div className="skills-list">{profile.skills.map(group => <div key={group.category}><h3>{group.category}</h3>
       <ul className="tags">{group.items.map(skill => <li key={skill}>{skill}</li>)}</ul></div>)}</div>
-      </section>}{[{ title: "Experience", entries: profile.experience }, { title: "Education", entries: profile.education }].filter(section => section.entries.length).map(section => <section className="about-section" key={section.title}><h2>{section.title}</h2><div className="timeline">{section.entries.map(entry => <article key={`${entry.organization}-${entry.title}`}><p className="eyebrow">{entry.period}</p><h3>{entry.title}</h3><p className="organization">{entry.organization}</p>{entry.description && <p>{entry.description}</p>}</article>)}</div></section>)}<ContactSection /></>;
+      </section>}{[{ title: "Experience", entries: profile.experience }, { title: "Education", entries: profile.education }].filter(section => section.entries.length).map(section => <section className="about-section" key={section.title}><h2>{section.title}</h2><div className="timeline">{section.entries.map(entry => <article key={`${entry.organization}-${entry.title}`}><p className="eyebrow">{entry.period}</p><h3>{entry.title}</h3><p className="organization">{entry.organization}</p>{entry.description && <p>{entry.description}</p>}</article>)}</div></section>)}{profile.resumeUrl && <ResumePreview url={profile.resumeUrl} />}<ContactSection /></>;
 }

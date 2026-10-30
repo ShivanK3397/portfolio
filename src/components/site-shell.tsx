@@ -16,7 +16,7 @@ export function Header() {
 }
 
 export function Footer() {
-  return <footer className="site-footer container"><div><Link href="/" className="footer-name">{profile.name}<span className="brand-dot">.</span></Link></div><div className="footer-right">{contactLinks.length > 0 && <nav aria-label="Contact links" className="contact-links">{contactLinks.map(link => <a key={link.label} href={link.href} target={link.href.startsWith("https://") ? "_blank" : undefined} rel={link.href.startsWith("https://") ? "noopener noreferrer" : undefined}>{link.label} <span aria-hidden="true">↗</span></a>)}</nav>}<p>© {new Date().getFullYear()} {profile.name}</p></div></footer>;
+  return <footer className="site-footer container"><div><Link href="/" className="footer-name">{profile.name}</Link></div><div className="footer-right"><p>© {new Date().getFullYear()} {profile.name}</p></div></footer>;
 }
 
 export function ContactSection() {

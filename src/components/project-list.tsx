@@ -25,7 +25,7 @@ export function ProjectList({ compact = false }: { compact?: boolean }) {
               <ul className="experience-highlights">
                 {project.highlights.map(highlight => <li key={highlight}>{highlight}</li>)}
               </ul>
-              <a className="text-link portfolio-github" href={project.githubUrl} target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+              {project.githubUrl ? <a className="text-link portfolio-github" href={project.githubUrl} target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a> : null}
             </>}
           </div>
         </article>

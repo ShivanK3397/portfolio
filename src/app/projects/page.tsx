@@ -5,7 +5,7 @@ import { projects } from "@/content/portfolio";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Explore Malicious Link Checker, a React and Flask application that uses machine learning to classify URLs as malicious or benign.",
+  description: "Explore Shivan's projects, including a machine learning URL classifier and Jarvis, a voice-controlled AI desktop assistant.",
   alternates: { canonical: "/projects" },
 };
 
